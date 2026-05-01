@@ -354,16 +354,45 @@ Confidence      : 99.90%
 
 ## Sonuçlar
 
-Eğitim sonucunda modelin performansı grafikler ve metriklerle analiz edilmiştir.
+Model, ResNet18 tabanlı transfer learning yaklaşımı kullanılarak 10 epoch boyunca eğitilmiştir. Eğitim sırasında en iyi doğrulama başarımı 5. epoch sonunda elde edilmiştir.
 
-Örnek sonuç formatı:
+### Eğitim Sonuçları
 
-Training Accuracy   : 96.40%
-Validation Accuracy : 94.10%
-Test Accuracy       : 93.80%
+```text
+En İyi Validation Accuracy : 97.00%
+Test Accuracy              : 97.75%
+```
+Eğitim sürecinde loss ve accuracy değerleri epoch bazında takip edilmiştir. Aşağıdaki grafik, eğitim ve doğrulama verileri üzerindeki loss/accuracy değişimini göstermektedir. 
 
-Not: Bu değerler örnek olarak verilmiştir. Gerçek değerler eğitim sonucunda elde edilen sonuçlara göre güncellenmelidir.
+![Doğruluk ve Kayıp Grafiği](results/figures/accuracy_loss_curve.png)
 
+### Karmaşıklık Matrisi Sonuçları
+
+Test veri seti toplam 400 görüntüden oluşmaktadır:
+
+cats : 200 görüntü
+dogs : 200 görüntü
+
+Modelin test veri setindeki karmaşıklık matrisi sonuçları:
+
+Kedi görüntüleri:
+193 doğru cats tahmini
+7 yanlış dogs tahmini
+
+Köpek görüntüleri:
+198 doğru dogs tahmini
+2 yanlış cats tahmini
+
+Bu sonuçlara göre model, test veri setinde genel olarak yüksek doğruluk elde etmiştir. Köpek sınıfında hata oranı daha düşükken, kedi sınıfında az sayıda görüntü köpek olarak sınıflandırılmıştır.
+
+![Karmaşıklık Matrisi](results/figures/confusion_matrix.png)
+
+---
+
+## Örnek Tahminler 
+Modelin test veri setindeki bazı örnek görüntüler üzerinde yaptığı tahminler aşağıda gösterilmiştir.
+
+![Örnek Tahminler](results/predictions/sample_predictions.png)
 ---
 
 ## Kullanılan Teknolojiler
@@ -376,6 +405,7 @@ NumPy
 Matplotlib
 Scikit-learn
 Pillow
+
 ---
 
 ## Öğrenilen Kavramlar
