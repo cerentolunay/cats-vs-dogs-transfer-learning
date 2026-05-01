@@ -1,1 +1,1 @@
-# cats-vs-dogs-transfer-learning-
+# cats-vs-dogs-transfer-learning
