@@ -423,6 +423,7 @@ Model Evaluation
 Confusion Matrix
 Overfitting
 Validation Accuracy
+
 ---
 
 ## Modelin Avantajları
@@ -430,6 +431,7 @@ Sıfırdan eğitime göre daha hızlıdır.
 Daha az veriyle daha iyi sonuç verebilir.
 ResNet18 hafif ve yönetilebilir bir modeldir.
 Gerçek görüntüler üzerinde çalıştığı için proje daha gerçekçi görünür.
+
 ---
 
 ## Modelin Sınırlılıkları
@@ -438,6 +440,7 @@ Farklı hayvan türleri için yeniden eğitilmesi gerekir.
 Düşük kaliteli veya bulanık görüntülerde hata yapabilir.
 Arka plan karmaşık olduğunda yanlış tahmin olasılığı artabilir.
 Veri setindeki dengesizlikler model başarısını etkileyebilir.
+
 ---
 
 ## Gelecek Geliştirmeler
@@ -450,6 +453,7 @@ Web arayüzü eklenerek kullanıcıların görüntü yükleyip tahmin alması sa
 Model ONNX formatına dönüştürülerek farklı platformlarda çalıştırılabilir.
 Grad-CAM ile modelin görüntüde hangi bölgelere odaklandığı görselleştirilebilir.
 Yanlış tahmin edilen örnekler analiz edilerek veri seti iyileştirilebilir.
+
 ---
 
 ## Örnek Kullanım Senaryosu
@@ -459,6 +463,7 @@ Bu model, temel seviyede bir hayvan görüntüsü sınıflandırma sistemi olara
 Input  : image.jpg
 Model  : ResNet18 Transfer Learning Classifier
 Output : Cat / Dog
+
 ---
 
 ## Sonuç
