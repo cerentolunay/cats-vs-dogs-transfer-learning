@@ -182,7 +182,7 @@ dataset/test/dogs
 
 ---
 
-##Veri Ön İşleme
+## Veri Ön İşleme
 
 Görüntüler modele verilmeden önce belirli işlemlerden geçirilmiştir.
 
@@ -338,13 +338,17 @@ Bu metrikler modelin yalnızca genel doğruluğunu değil, sınıflar arasındak
 ## Tahmin Yapma
 
 Tek bir görüntü üzerinde tahmin yapmak için:
+
 ```bash
-python src/predict.py --image path/to/image.jpg
+python src/predict.py --image dataset/test/cats/307.jpg
 ```
 Örnek çıktı:
 
-Predicted Class: Dog
-Confidence: 94.27%
+Prediction Result
+-----------------
+Image Path      : dataset/test/cats/307.jpg
+Predicted Class : cats
+Confidence      : 99.90%
 
 ---
 
